@@ -25,7 +25,7 @@ module.exports = function(){
 
     app.use(function (error, req, res, next) { //4 argumentos para erro
         res.status(500).render('erros/500');
-        next();
+        next(error);
     });
 
     return app;

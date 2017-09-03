@@ -8,6 +8,8 @@ module.exports = function(app) {
 
         produtosDAO.lista(function(err, results){
 
+        	console.log("#ERRO: " + err);
+
         	if(err){
         		return next(err);
 			}

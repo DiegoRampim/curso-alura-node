@@ -6,6 +6,11 @@ module.exports = function (app) {
         var produtosDAO = new app.infra.ProdutosDAO(connection);
 
         produtosDAO.lista(function(err, results, fields){
+
+            console.log("##ERRO: " + err);
+
+            console.log("##RESULT: " + results);
+
             res.render('home/index', {livros : results});
         });
 
